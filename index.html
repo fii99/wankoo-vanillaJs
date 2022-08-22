@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wangkoo</title>
+
+    <!-- toCSS -->
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+
+    <!-- iconScout -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Nav -->
+      <nav class="nav-origin">
+        <div class="container container-nav shadow">
+          <p class="logo-wangkoo bold-element font-large color-light">
+            wangkoo
+          </p>
+          <input
+            type="search"
+            placeholder="search by name or nisn . . . "
+            id="search-field"
+          />
+        </div>
+      </nav>
+      <!-- End of Nav -->
+
+      <!-- Main -->
+      <main class="main-origin">
+        <div class="container container-main">
+          <!-- SECTION : Introduction -->
+          <section class="introduction">
+            <p class="bold-element font-large">Make a Plan</p>
+            <p class="font-medium">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Assumenda perferendis non error dolorem magni, nam velit
+              laboriosam? Nemo, id repellat?
+            </p>
+            <div class="card">
+              <div id="input-data-icon">
+                <div class="icon pulse-animation">
+                  <i class="uil uil-angle-down"></i>
+                </div>
+                <p class="bold-element font-medium">Input Data</p>
+              </div>
+              <!-- Form -->
+              <form action="#" id="form-input-data" class="font-small">
+                <!-- Field Name-Nisn -->
+                <div id="field-name-nisn">
+                  <div id="field-name">
+                    <label for="name"
+                      >name<span class="font-medium required">*</span><br />
+                      <input
+                        id="name"
+                        type="text"
+                        placeholder="Enter student's name"
+                        name="name"
+                        autocomplete="off"
+                        autofocus
+                        required
+                      />
+                    </label>
+                  </div>
+                  <div id="field-nisn">
+                    <label for="nisn"
+                      >nisn<span class="font-medium required">*</span> <br />
+                      <input
+                        id="nisn"
+                        type="text"
+                        placeholder="Enter student's number"
+                        name="nisn"
+                        autocomplete="off"
+                        maxlength="8"
+                        minlength="8"
+                        required
+                      />
+                    </label>
+                  </div>
+                </div>
+                <!-- End of Field Name-Nisn -->
+                <!-- Field Class -->
+                <div id="field-class">
+                  <label for="class"
+                    >class<span class="font-medium required">*</span> <br />
+                    <input
+                      id="class"
+                      type="number"
+                      placeholder="Enter student's classroom"
+                      name="class"
+                      autocomplete="off"
+                      min="1"
+                      max="6"
+                      required
+                    />
+                  </label>
+                </div>
+                <!-- End of Field Class -->
+                <!-- Field Borndate-Gender -->
+                <div id="field-borndate-gender">
+                  <div id="field-borndate">
+                    <label for="bithdate"
+                      >birth date<span class="font-medium required">*</span>
+                      <br />
+                      <input
+                        id="birthdate"
+                        type="date"
+                        placeholder="Enter student's birth-date"
+                        name="birthdate"
+                        autocomplete="off"
+                        min="2000-01-01"
+                        max="2022-01-01"
+                        required
+                      />
+                    </label>
+                  </div>
+                  <div id="field-gender">
+                    <div>gender<span class="font-medium required">*</span></div>
+                    <div class="gender">
+                      <div class="boy">
+                        <input
+                          id="gender-boy"
+                          type="radio"
+                          id="boy"
+                          name="gender"
+                          value="boy"
+                          required
+                        />
+                        <label for="gender-boy">Boy</label>
+                      </div>
+                      <div class="girl">
+                        <input
+                          id="gender-girl"
+                          type="radio"
+                          id="girl"
+                          name="gender"
+                          value="girl"
+                          required
+                        />
+                        <label for="gender-girl">Girl</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End of Field Borndate-Gender -->
+                <!-- Submit -->
+                <button>Add</button>
+                <!-- End of Submit -->
+              </form>
+              <!-- End of Form -->
+            </div>
+          </section>
+          <!-- END SECTION : End of Introduction -->
+        </div>
+        <!-- SECTION : Data Savings -->
+        <section class="data-savings">
+          <p class="bold-element font-large">Your Savings</p>
+          <div class="container-data-savings"></div>
+        </section>
+        <!-- END SECTION : End of Data Savings -->
+      </main>
+      <!-- End of Main -->
+
+      <!-- Footer -->
+      <footer class="footer-origin"></footer>
+      <!-- End of Footer -->
+    </div>
+
+    <!-- Modal -->
+    <div id="overlay-nisn">
+      <div id="modal-nisn-exist">
+        <p>
+          <span class="bold-element">Sorry</span>, Id Nisn :
+          <span id="id-nisn" style="color: red"></span> Already Exist
+        </p>
+        <button>close</button>
+      </div>
+    </div>
+    <!-- End of Modal -->
+
+    <!-- toJS -->
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #fff;
+  --bg-card: #efefef66;
+  --bg-line: #dddddd66;
+
+  --color-primary: #3b44f6;
+  --color-primary-darker: #3330e4;
+  --color-primary-lighter: #abc9ff;
+
+  --color-danger: #eb1d36;
+
+  --container-lg: 88%;
+  --container-md: 92%;
+  --container-sm: 96%;
+
+  --shadow-origin: 0 2px 10px 0 #203239;
+  --shadow-card: 0 6px 10px 0 #7f8487;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: var(--bg-color);
+  user-select: none;
+}
+.container {
+  width: var(--container-lg);
+  margin: 0 auto;
+}
+
+/* Modal */
+
+#overlay-nisn {
+  background: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 330ms ease-out;
+  transform: scale(1.2);
+}
+
+body.overlay-is-open > #overlay-nisn {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+body.overlay-is-open > .wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  filter: blur(4px);
+}
+
+/* Ends of Modal */
+
+/* Keyframes */
+@keyframes pulse {
+  0% {
+    box-shadow: var(--color-primary-darker) 0 0 0 0;
+  }
+  75% {
+    box-shadow: var(--color-primary-lighter) 0 0 0 8px;
+  }
+}
+
+/* =========================START OF UTILITY CLASS=============================== 
+/* Font-Style */
+.bold-element {
+  font-weight: bold;
+}
+
+/* Font-Size */
+.font-large {
+  font-size: 2rem;
+}
+
+.font-medium {
+  font-size: 1.2rem;
+}
+
+.font-small {
+  font-size: 1rem;
+}
+
+.required {
+  font-weight: bold;
+  color: var(--color-danger);
+}
+
+/* Font-Color */
+.color-light {
+  color: var(--bg-color);
+}
+
+/* Shadow */
+.shadow {
+  box-shadow: var(--shadow-origin);
+}
+
+/* Space */
+.space {
+  padding: 2rem auto;
+}
+
+/* Card */
+.card {
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow-card);
+}
+
+.icon {
+  height: 25px;
+  width: 25px;
+  background: var(--color-primary);
+  color: var(--bg-color);
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  cursor: pointer;
+}
+
+.icon:hover {
+  animation: none;
+}
+
+.pulse-animation {
+  animation: pulse 1s infinite;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  column-gap: 6px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* ==========================END OF UTILITY CLASS================================= 
+
+
+/* Other */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="search"],
+button {
+  padding: 0 1rem;
+  height: 2.6rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  background: var(--bg-color);
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Nav */
+.container-nav {
+  width: 100%;
+  background: var(--color-primary);
+  padding: 1.5rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  display: flex;
+  z-index: 2;
+  position: fixed;
+}
+
+input[type="search"] {
+  width: 40%;
+  max-width: 500px;
+}
+
+/* End of Nav */
+
+/* Main */
+.container-main {
+  margin-top: 5.5rem;
+}
+
+.introduction {
+  padding: 2rem 0 3rem;
+}
+
+.introduction > .card {
+  max-width: 920px;
+}
+
+.introduction > p:nth-child(1) {
+  margin-bottom: 0.4rem;
+}
+
+.introduction > p:nth-child(2) {
+  line-height: 1.8rem;
+  margin-bottom: 1.2rem;
+}
+
+#input-data-icon {
+  display: flex;
+  align-items: center;
+  column-gap: 0.6rem;
+}
+
+/* Form */
+#form-input-data {
+  width: 100%;
+  margin-top: 1rem;
+}
+#field-name-nisn,
+#field-borndate-gender {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  column-gap: 1rem;
+}
+#field-name,
+#field-nisn {
+  width: 50%;
+}
+#field-borndate {
+  width: 75%;
+}
+#field-gender {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+}
+#field-class {
+  margin: 0.4rem 0;
+}
+.gender {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+}
+button {
+  margin-top: 1rem;
+  background: var(--color-primary);
+  color: var(--bg-color);
+}
+button:hover {
+  background: var(--color-primary-darker);
+}
+/* End of Form */
+
+/* Data-Savings */
+.data-savings {
+  background: var(--bg-line);
+  width: 100%;
+  z-index: 1;
+  left: 0;
+  padding: 2rem calc((100% - var(--container-lg)) / 2);
+}
+
+.data-savings > p {
+  margin-bottom: 1rem;
+}
+
+.container-data-savings {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 18px;
+}
+
+.card-savings {
+  background: var(--bg-color);
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+#data-savings {
+  transition: all 400ms ease;
+}
+
+#data-savings:hover {
+  box-shadow: 0 6px 10px 0 #203239dd;
+}
+/* End of Data Savings */
+/* End of Main */
